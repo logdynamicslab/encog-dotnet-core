@@ -44,7 +44,7 @@ namespace Encog.ML.Bayesian
         /// <summary>
         /// The discrete choices that make up the state of this event.
         /// </summary>
-        private readonly ICollection<BayesianChoice> _choices = new SortedSet<BayesianChoice>();
+        private readonly ICollection<BayesianChoice> _choices = new List<BayesianChoice>();
 
         /// <summary>
         /// The label for this event.

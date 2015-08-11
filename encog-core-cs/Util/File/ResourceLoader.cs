@@ -51,8 +51,8 @@ namespace Encog.Util.File
             Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
             foreach (Assembly a in assemblies)
             {
-                if (a.IsDynamic) // this is the fix (https://github.com/encog/encog-dotnet-core/issues/51)
-                    continue;
+                //if (a.IsDynamic) // this is the fix (https://github.com/encog/encog-dotnet-core/issues/51)
+                //    continue;
                 try
                 {
                     result = a.GetManifestResourceStream(resource);

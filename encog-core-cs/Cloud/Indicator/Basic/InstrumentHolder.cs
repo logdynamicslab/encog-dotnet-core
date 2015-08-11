@@ -40,7 +40,7 @@ namespace Encog.Cloud.Indicator.Basic
         /// <summary>
         /// The sorted data.
         /// </summary>
-        private readonly ICollection<long> _sorted = new SortedSet<long>();
+        private readonly ICollection<long> _sorted = new List<long>();
 
         /// <summary>
         /// The data.

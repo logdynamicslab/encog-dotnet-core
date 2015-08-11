@@ -45,7 +45,7 @@ namespace Encog.Util.NetworkUtil
         /// <returns>
         ///  The compute pair ready for network computes)
         /// </returns>
-        public static Tuple<List<double>,NormalizeArray> GetReadiedComputePair(int WindoSize, params double[][] pparamInputs)
+        public static KeyValuePair<List<double>,NormalizeArray> GetReadiedComputePair(int WindoSize, params double[][] pparamInputs)
         {
             try
             {
@@ -79,12 +79,12 @@ namespace Encog.Util.NetworkUtil
                     }
                     if (currentindex == WindoSize)
                     {
-                        return new Tuple<List<double>, NormalizeArray>(dtda, Normee);
+                        return new KeyValuePair<List<double>, NormalizeArray>(dtda, Normee);
                     }
                     //Lets increment the indexes..
                     listindex++;
                 }
-                return new Tuple<List<double>, NormalizeArray>(dtda, Normee);
+                return new KeyValuePair<List<double>, NormalizeArray>(dtda, Normee);
             }
             catch (Exception ex)
             {
@@ -102,7 +102,7 @@ namespace Encog.Util.NetworkUtil
         /// <param name="WindoSize"></param>
         /// <param name="pparamInputs"></param>
         /// <returns></returns>
-        public static Tuple<IMLDataSet,NormalizeArray> Load(double[] idealsinputs, int WindoSize, params double[][] pparamInputs)
+        public static KeyValuePair<IMLDataSet,NormalizeArray> Load(double[] idealsinputs, int WindoSize, params double[][] pparamInputs)
         {
             try
             {
@@ -155,7 +155,7 @@ namespace Encog.Util.NetworkUtil
                     listindex++;
                 }
                 //Return the dataset and the normalization array..
-                return new Tuple<IMLDataSet, NormalizeArray>(finalSet,Normer);
+                return new KeyValuePair<IMLDataSet, NormalizeArray>(finalSet,Normer);
             }
             catch (Exception ex)
             {

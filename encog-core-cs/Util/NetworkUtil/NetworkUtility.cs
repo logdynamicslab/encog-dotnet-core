@@ -415,10 +415,10 @@ namespace Encog.Util.NetworkUtil
         /// </summary>
         /// <param name="arrays">The arrays.</param>
         /// <returns>returns a tuple with the array in item1 and the normalization in item 2.</returns>
-        public static Tuple<double[], NormalizeArray> NormalizeArray(double[] arrays)
+        public static KeyValuePair<double[], NormalizeArray> NormalizeArray(double[] arrays)
         {
             var norm = new NormalizeArray();
-            return new Tuple<double[], NormalizeArray>(norm.Process(arrays), norm);
+            return new KeyValuePair<double[], NormalizeArray>(norm.Process(arrays), norm);
         }
 
         /// <summary>
